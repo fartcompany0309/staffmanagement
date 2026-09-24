@@ -1,0 +1,15 @@
+{
+  "name": "staffmanagement",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "postStartCommand": "cd /workspaces/staffmanagement && npm install -g azure-functions-core-tools@4 --unsafe-perm true || true",
+  "forwardPorts": [5173, 7071],
+  "portsAttributes": {
+    "5173": {
+      "label": "フロントエンド",
+      "onAutoForward": "openBrowser"
+    },
+    "7071": {
+      "label": "API"
+    }
+  }
+}
